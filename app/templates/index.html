@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Admin – Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔒 Shadow Admin Dashboard</h1>
+    <div class="identity" id="identity">Loading...</div>
+</header>
+
+<div class="container">
+    <!-- Create Server Section -->
+    <section class="card">
+        <h2>Create New Dev Server</h2>
+        <p style="color: #9ca3af; font-size: 14px; margin-bottom: 15px;">
+            Create a new development server. You can add metadata and manage it after creation.
+        </p>
+        <div style="display: flex; gap: 10px; align-items: flex-start;">
+            <div style="flex: 1;">
+                <input type="text" id="server-name" placeholder="Enter server name (e.g., ML-Node-1)">
+            </div>
+            <button id="create-server">Create Server</button>
+        </div>
+        <div class="message error" id="create-error"></div>
+    </section>
+
+    <!-- Servers List -->
+    <section class="card">
+        <h2>Your Servers</h2>
+        <p style="color: #9ca3af; font-size: 14px; margin-bottom: 15px;">
+            Manage your development and production servers. Click "View" to see details and metadata.
+        </p>
+        <div style="overflow-x: auto;">
+            <table id="servers-table">
+                <thead>
+                    <tr>
+                        <th>Server ID</th>
+                        <th>Name</th>
+                        <th>Environment</th>
+                        <th>Status</th>
+                        <th>Owner</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" style="text-align: center; color: #9ca3af;">
+                            Loading servers...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Quick Help -->
+    <section class="card" style="background-color: #1a1f2e; border-left: 3px solid #2563eb;">
+        <h3 style="margin-bottom: 10px;">💡 Quick Guide</h3>
+        <ul style="padding-left: 20px; color: #9ca3af; font-size: 14px; line-height: 1.8;">
+            <li><strong>Create:</strong> Create new dev servers for your projects</li>
+            <li><strong>View:</strong> Click to see server details and add metadata</li>
+            <li><strong>Orphan:</strong> Mark a server as orphaned (will be processed by system)</li>
+            <li><strong>Quarantined:</strong> Servers automatically quarantined after being orphaned</li>
+            <li><strong>Restore:</strong> Bring quarantined servers back to active status</li>
+        </ul>
+    </section>
+</div>
+
+<script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

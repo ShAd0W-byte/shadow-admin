@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow Admin – Quarantine</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Quarantined Servers</h1>
+    <a href="/">← Back to Dashboard</a>
+</header>
+
+<section class="card">
+    <table id="quarantine-table">
+        <thead>
+            <tr>
+                <th>Server ID</th>
+                <th>Name</th>
+                <th>Environment</th>
+                <th>Status</th>
+                <th>Inspect</th>
+                <th>Restore</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<script type="module" src="/static/js/quarantine.js"></script>
+</body>
+</html>
