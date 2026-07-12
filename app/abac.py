@@ -1,17 +1,6 @@
-# app/abac.py
-# =========================================
+
 # ABAC Engine — Authorization Logic
 # Shadow Admin CTF
-#
-# This module is PURE LOGIC.
-# - No database access
-# - No HTTP / FastAPI
-# - No metadata
-# - No bot knowledge
-#
-# If the exploit works, THIS CODE MUST NOT CHANGE.
-# =========================================
-
 
 class User:
     def __init__(self, user_id: str, role: str):
